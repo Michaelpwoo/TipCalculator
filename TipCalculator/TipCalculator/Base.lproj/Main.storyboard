@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EkH-Cv-aOv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oon-CC-heu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip Calculator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMy-Nc-te3">
+                                <rect key="frame" x="107" y="61" width="107" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Amount: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmW-6C-bco">
+                                <rect key="frame" x="83" y="171" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKv-uj-9fV">
+                                <rect key="frame" x="179" y="167" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="4ok-lV-DbW"/>
+                                </connections>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="5" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="5BX-2V-faf">
+                                <rect key="frame" x="168" y="292" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="tipSlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="eeE-MY-NKr"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3k-Hc-YOf">
+                                <rect key="frame" x="116" y="247" width="37" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwh-WP-nNi">
+                                <rect key="frame" x="179" y="247" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23P-9d-XtB">
+                                <rect key="frame" x="115" y="415" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calculate Tip">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateTipButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="V8l-Tb-kFg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isy-fx-7xf">
+                                <rect key="frame" x="68" y="361" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xi6-yZ-SnS">
+                                <rect key="frame" x="196" y="361" width="72" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5BX-2V-faf" secondAttribute="trailing" constant="36" id="0z9-uQ-Fav"/>
+                            <constraint firstItem="5BX-2V-faf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="170" id="2Ez-TV-8Sl"/>
+                            <constraint firstItem="g3k-Hc-YOf" firstAttribute="bottom" secondItem="fwh-WP-nNi" secondAttribute="bottom" id="8dB-8M-EvC"/>
+                            <constraint firstItem="SmW-6C-bco" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="83" id="AA9-uI-xSF"/>
+                            <constraint firstAttribute="trailing" secondItem="23P-9d-XtB" secondAttribute="trailing" constant="115" id="FmL-hv-POr"/>
+                            <constraint firstItem="jMy-Nc-te3" firstAttribute="top" secondItem="EkH-Cv-aOv" secondAttribute="bottom" constant="41" id="HFH-nR-1l7"/>
+                            <constraint firstAttribute="trailing" secondItem="jMy-Nc-te3" secondAttribute="trailing" constant="106" id="Lej-oa-7Dg"/>
+                            <constraint firstItem="Oon-CC-heu" firstAttribute="top" secondItem="23P-9d-XtB" secondAttribute="bottom" constant="35" id="Tqq-TG-Wf6"/>
+                            <constraint firstItem="jMy-Nc-te3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="107" id="apY-2J-I7P"/>
+                            <constraint firstItem="xi6-yZ-SnS" firstAttribute="width" secondItem="isy-fx-7xf" secondAttribute="width" constant="-13" id="bDK-0s-fIK"/>
+                            <constraint firstAttribute="trailing" secondItem="TKv-uj-9fV" secondAttribute="trailing" constant="44" id="dQl-rO-DIK"/>
+                            <constraint firstAttribute="trailing" secondItem="xi6-yZ-SnS" secondAttribute="trailing" constant="52" id="eaE-Ro-MBG"/>
+                            <constraint firstItem="SmW-6C-bco" firstAttribute="centerY" secondItem="TKv-uj-9fV" secondAttribute="centerY" constant="-0.5" id="jU1-yM-ftO"/>
+                            <constraint firstItem="23P-9d-XtB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="115" id="qjJ-CR-km1"/>
+                            <constraint firstItem="g3k-Hc-YOf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="116" id="s3m-gL-1aO"/>
+                            <constraint firstItem="isy-fx-7xf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="68" id="uOt-tZ-yXs"/>
+                            <constraint firstAttribute="trailing" secondItem="fwh-WP-nNi" secondAttribute="trailing" constant="44" id="yef-vr-i1Y"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="TKv-uj-9fV" id="keC-lm-yxg"/>
+                        <outlet property="tipAmountSlider" destination="5BX-2V-faf" id="F93-3L-MZP"/>
+                        <outlet property="tipLabel" destination="fwh-WP-nNi" id="GbL-RO-QMo"/>
+                        <outlet property="totalPriceLabel" destination="xi6-yZ-SnS" id="t0F-M7-gRJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
